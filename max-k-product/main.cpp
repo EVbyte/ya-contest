@@ -5,6 +5,7 @@ using namespace std;
 
 const int LMAX = int(1e5) + 10;
 const int NMAX = int(1e9)*2 + 10;
+const int EDGE = int(1e9)+7;
 
 long long A[LMAX];
 int N;
@@ -40,8 +41,11 @@ void calc()
             long long lprod = A[lidx]*A[lidx+1];
             long long rprod = A[ridx]*A[ridx-1];
             if(lprod >= rprod){
-                if(!used)
+                if(!used){
                     product = lprod;
+
+                }
+
                 else
                     product *= lprod;
                 lidx += 2;
@@ -68,4 +72,7 @@ int main()
     calc();
     cout << product;
     return 0;
+}
+
+int mod(long long value){
 }
