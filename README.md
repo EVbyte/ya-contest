@@ -1,1 +1,1 @@
-# Yandex programming contest #1
+#  Yandex programming contest #1
